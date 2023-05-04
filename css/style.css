@@ -1,0 +1,273 @@
+.palette {
+    color: #3A7CC3;
+    color: #0E2A47;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap');*/
+
+* {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Signika Negative', sans-serif;*/
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    background-color: #0E2A47;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    grid-template-rows: 1fr;
+}
+
+.page_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: .8rem;
+    gap: .8rem;
+    grid-column: 1/2;
+    box-shadow: inset -2px 0 rgba(0, 0, 0, 0.294);
+}
+
+.page_menu > button {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    padding: 1rem;
+    background-color: #0b223a;
+    border-radius: .4rem;
+}
+
+.page_body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    grid-column: 2/3;
+    overflow-y: scroll;
+}
+
+.hero {
+    min-height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_info {
+    background-position: center;
+    background-image: url(../img/cb.svg);
+    width: 100%;
+    height: 100%;
+    animation-name: background_animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@keyframes background_animation {
+    0%   {background-position: center 20%}
+    50%  {background-position: center 80%}
+    100% {background-position: center 20%}
+}
+
+.hero_info > img {
+    box-shadow: -4px 4px 0 white;
+}
+
+.hero_text {
+    text-shadow: -2px 2px rgba(255, 255, 255, 0.203);
+}
+
+.seccion {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 2rem;
+    padding-bottom: 12rem;
+}
+
+.seccion:nth-child(2n) {
+    background-color: #0b223a;
+}
+
+.skill_container {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 12rem;
+    min-width: 10rem;
+    gap: 2rem;
+}
+
+.skill_box {
+    background-color: #0E2A47;
+    min-height: 12rem;
+    min-width: 20rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.20);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.skill_box > h4 {
+    grid-column: 1/3;
+}
+
+.skill {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.progressbar {
+    width: 100%;
+    height: .8rem;
+    background-color: #0b223a;
+    border-radius: 2rem;
+}
+
+.progress {
+    width: 30%;
+    height: .8rem;
+    background-color: #DD1133;
+    border-radius: 2rem;
+    animation-name: progress_animation;
+    animation-duration: 2s;
+}
+
+.skill:nth-child(4n)>.progressbar>.progress {
+    background-color: #3A7CC3;
+}
+
+.skill:nth-child(3n)>.progressbar>.progress {
+    background-color: #D0E122;
+}
+
+
+@keyframes progress_animation {
+    0%   {width: 0%}
+    100% {}
+}
+
+
+.project_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 12rem;
+    min-width: 10rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project_box {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #0b223a;
+    min-width: 16rem;
+    gap: 1rem;
+    max-width: 40%;
+}
+
+.project_box:first-child {
+    box-shadow: 1px 1px 40px rgba(255, 255, 255, 0.104);
+    animation: feautred_project;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes feautred_project {
+    0% {
+        box-shadow: 1px 1px 40px rgba(255, 255, 255, 0.104);
+    }
+    50% {
+        box-shadow: 1px 1px 80px rgba(255, 255, 255, 0.504);
+    }
+    100% {
+        box-shadow: 1px 1px 40px rgba(255, 255, 255, 0.104);
+    }
+}
+
+.project_image> img {
+    background-color: #0E2A47;
+    padding: 1rem;
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
+}
+.project_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    text-align: left;
+    border-left: 3px solid #071627;
+}
+
+.project_box_buttons {
+    grid-column: 1/3;
+    position: relative;
+    top: 2.5rem;
+    z-index: 1;
+    display: flex;
+    gap: 4rem;
+    justify-content: right;
+    align-items: center;
+}
+
+.project_box_buttons>a>button {
+    border: 1px solid #071627;
+    padding: .4rem 1rem;
+    border-radius: .4rem;
+    background-color: #0E2A47;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: -1px 1px 1rem rgba(255, 255, 255, 0.075);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.project_box_buttons>a>button:hover {
+    box-shadow: -1px 1px 1rem rgb(255, 255, 255);
+    transition: .4s;
+}
+
+.project_box_buttons>a>button:active {
+    box-shadow: -1px 1px 1rem rgba(255, 255, 255, 0.075);
+    transition: .4s;
+}
