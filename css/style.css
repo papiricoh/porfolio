@@ -35,19 +35,23 @@ body {
     width: 100%;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 15fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
 
 .page_menu {
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
+    height: 30rem;
     align-items: stretch;
-    padding: .8rem;
+    padding: 1.8rem;
+    padding-left: .6rem;
     gap: .8rem;
-    grid-column: 1/2;
-    box-shadow: inset -2px 0 rgba(0, 0, 0, 0.294);
+    background-color: #0858ad0d;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
 .page_menu > button {
@@ -56,14 +60,13 @@ body {
     color: white;
     padding: 1rem;
     background-color: #0b223a;
-    border-radius: .4rem;
+    border-radius: 1.4rem;
 }
 
 .page_body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    grid-column: 2/3;
     overflow-y: scroll;
 }
 
@@ -270,4 +273,11 @@ body {
 .project_box_buttons>a>button:active {
     box-shadow: -1px 1px 1rem rgba(255, 255, 255, 0.075);
     transition: .4s;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-top: 2px solid #071627;
 }
