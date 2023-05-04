@@ -312,7 +312,10 @@ body {
     justify-content: center;
 }
 
-
+.skill_box > h4 {
+    text-shadow: -2px 2px 0 rgba(255, 255, 255, 0.2);
+}
+ 
 @media screen and (max-width: 768px) {
     .page_menu {
         display: flex;
