@@ -42,6 +42,7 @@ body {
 .page_menu {
     display: flex;
     position: absolute;
+    z-index: 1;
     flex-direction: column;
     justify-content: center;
     height: 30rem;
@@ -50,17 +51,23 @@ body {
     padding-left: .6rem;
     gap: .8rem;
     background-color: #0858ad0d;
-    border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
 }
 
 .page_menu > button {
-    background-color: transparent;
     border: 0;
     color: white;
     padding: 1rem;
     background-color: #0b223a;
     border-radius: 1.4rem;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.page_menu > button:hover {
+    background-color: transparent;
+    
+    transition: .4s;
 }
 
 .page_body {
@@ -217,13 +224,13 @@ body {
 
 @keyframes feautred_project {
     0% {
-        box-shadow: 1px 1px 40px rgba(255, 255, 255, 0.104);
+        box-shadow: 1px 1px 40px 0 rgba(255, 255, 255, 0.104);
     }
     50% {
-        box-shadow: 1px 1px 80px rgba(255, 255, 255, 0.504);
+        box-shadow: 1px 1px 40px 10px rgba(255, 255, 255, 0.504);
     }
     100% {
-        box-shadow: 1px 1px 40px rgba(255, 255, 255, 0.104);
+        box-shadow: 1px 1px 40px 0 rgba(255, 255, 255, 0.104);
     }
 }
 
@@ -279,5 +286,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    border-top: 2px solid #071627;
+    gap: 2rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.514);
+    background-color: #071627;
+    padding: 2rem 4rem;
+}
+
+.footer_box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 2rem;
+    gap: 1rem;
+}
+
+.footer_info {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #0E2A47;
+    border-radius: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
