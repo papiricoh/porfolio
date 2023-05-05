@@ -317,6 +317,11 @@ body {
 }
  
 @media screen and (max-width: 768px) {
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .page_menu {
         display: flex;
         position: absolute;
